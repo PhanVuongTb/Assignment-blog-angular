@@ -24,6 +24,7 @@ export class CategoryComponent implements OnInit {
   onHandleRemove(id: number) {
     this.categoryService.xoaCategory(id).subscribe(() => {
       this.categorys = this.categorys.filter(item => item.id !== id);
+      alert("Xóa thành công!")
     })
   
   }

@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninPageComponent  },
   { path: 'products', component: ProductPageComponent },
   { path: 'products/:id', component: ProductPageDetailComponent },
-  { path: "**", component: PageNotFoundComponent },
+  
 
   // dashboard
   { path: 'dashboard', component: DashboardComponent },
@@ -37,6 +37,9 @@ const routes: Routes = [
 
   { path: 'dashboard/users', component: UsersComponent },
   { path: 'dashboard/users/edit/:id', component: UsersEditComponent},
+
+
+  { path: "**", component: PageNotFoundComponent },
 
 ];
 

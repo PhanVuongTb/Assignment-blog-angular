@@ -39,6 +39,7 @@ export class ProductsAddComponent implements OnInit {
 
       // chuyển hướng router
       this.router.navigateByUrl('/dashboard/posts/');
+      alert("Thêm thành công!")
     })
   }
 

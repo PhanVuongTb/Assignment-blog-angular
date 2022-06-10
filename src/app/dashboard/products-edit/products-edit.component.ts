@@ -34,6 +34,7 @@ export class ProductsEditComponent implements OnInit {
       console.log(data);
       // chuyển hướng router
       this.router.navigateByUrl('/dashboard/posts');
+      alert("Sửa thành công!")
     })
   }
 

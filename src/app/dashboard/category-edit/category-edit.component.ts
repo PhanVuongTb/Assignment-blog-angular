@@ -28,6 +28,7 @@ export class CategoryEditComponent implements OnInit {
       console.log(data);
       // chuyển hướng router
       this.router.navigateByUrl('/dashboard/category');
+      alert("Sửa thành công!")
     })
   }
 

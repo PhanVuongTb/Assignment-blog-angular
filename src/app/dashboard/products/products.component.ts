@@ -25,6 +25,7 @@ export class ProductsComponent implements OnInit {
   onHandleRemove(id: number) {
     this.potService.xoaPost(id).subscribe(() => {
       this.pots = this.pots.filter(item => item.id !== id);
+      alert("Xóa thành công!")
     })
   }
 

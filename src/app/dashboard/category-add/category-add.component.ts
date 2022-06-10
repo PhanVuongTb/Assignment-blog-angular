@@ -26,9 +26,10 @@ export class CategoryAddComponent implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
      this.categoryService.addCategory(this.categorys).subscribe(data => {
       console.log(data);
-
+      
       // chuyển hướng router
       this.router.navigateByUrl('/dashboard/category');
+      alert("Thêm thành công!")
     })
   }
 
