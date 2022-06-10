@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 fw-bold text-danger">Edit Category</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Form -->
+<div class="container">
+  <div class="row">
+    <div class="col-ms-4">
+      <form action="" (ngSubmit)="onSubmit()" #formAdd="ngForm">
+        <div class="mb-2">
+          <input class="form-control" type="text" placeholder="Name" [(ngModel)]="categorys.name" name="name" />
+        </div>
+        <div class="mb-2">
+          <input class="btn btn-danger" type="submit" placeholder="Add">
+          <a routerLink="dashboard/category" class="btn btn-dark ms-2">Close</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

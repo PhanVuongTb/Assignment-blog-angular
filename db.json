@@ -1,0 +1,29 @@
+{
+  "posts": [],
+  "users": [
+    {
+      "email": "vuong@gmail.com",
+      "password": "$2a$10$E9wkJlZZUPMIyLs/6n7Wae1yDR399UeyJqPUODf0jdyo898WpKfX6",
+      "id": 1,
+      "name": "vuong",
+      "mobile": 0
+    },
+    {
+      "email": "pdvuongtb@gmail.com",
+      "password": "$2a$10$FOh5Iptk4DeSiBYhyS9KyOIs79bArjTNfcplf5ZfFWSUNX9X5yeX2",
+      "id": 2,
+      "name": "vuong1",
+      "mobile": "0986977365"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "fonend-2"
+    },
+    {
+      "id": 2,
+      "name": "backend"
+    }
+  ]
+}
