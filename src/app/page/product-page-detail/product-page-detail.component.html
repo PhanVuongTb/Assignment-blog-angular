@@ -1,1 +1,20 @@
-<p>product-page-detail works!</p>
+<section class="workDetails">
+  <div class="custom-container">
+    <div class="workDetails-header">
+      <h2 class="text-[30px] font-bold md:text-[34px] md:leading-[50px] leading-[40px] md:pb-[25px] pb-[13px]">
+        {{post.title}}</h2>
+    </div>
+    <div class="workDetails-meta flex space-x-[27px] items-center mb-[23px]">
+      <span class="rounded-[16px] p-2 bg-red-500">2020</span>
+      <span>Dashboard, User Experience Design</span>
+    </div>
+    <div class="workDetails-content">
+      <p class="text-[16px] leading-[30px] md:pb-[46px] pb-[23px]">{{post.description}}</p>
+      <img [src]="post.photo" alt="">
+      <h1 class="font-medium md:text-[30px] md:pt-[54px] pt-[23px] text-[25px] leading-[60px]">Heading 1</h1>
+      <h2 class="font-medium md:text-[24px] text-[20px] leading-[60px]">Heading 2</h2>
+      <img class="w-full" src="/image/Rectangle 5.png" alt="">
+      <img class="w-full" src="/image/Rectangle 6.png" alt="">
+    </div>
+  </div>
+</section>

@@ -9,6 +9,8 @@ import { ProductsEditComponent } from './dashboard/products-edit/products-edit.c
 import { ProductsComponent } from './dashboard/products/products.component';
 import { UsersEditComponent } from './dashboard/users-edit/users-edit.component';
 import { UsersComponent } from './dashboard/users/users.component';
+import { BlogPageComponent } from './page/blog-page/blog-page.component';
+import { ContactPageComponent } from './page/contact-page/contact-page.component';
 import { HomePageComponent } from './page/home-page/home-page.component';
 import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 import { ProductPageDetailComponent } from './page/product-page-detail/product-page-detail.component';
@@ -21,8 +23,10 @@ const routes: Routes = [
   { path: '', component: HomePageComponent  },
   { path: 'signup', component: SignupPageComponent  },
   { path: 'signin', component: SigninPageComponent  },
-  { path: 'products', component: ProductPageComponent },
-  { path: 'products/:id', component: ProductPageDetailComponent },
+  { path: 'blog', component: BlogPageComponent },
+  { path: 'posts', component: ProductPageComponent },
+  { path: 'posts/:id', component: ProductPageDetailComponent },
+  { path: 'contact', component: ContactPageComponent },
   
 
   // dashboard

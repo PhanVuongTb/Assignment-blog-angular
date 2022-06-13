@@ -1,5 +1,38 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Designing Dashboards",
+      "photo": "https://picsum.photos/246/180",
+      "date": "2020-02-01",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet",
+      "category": ""
+    },
+    {
+      "id": 2,
+      "title": "Vibrant Portraits of 2020",
+      "photo": "https://picsum.photos/246/180",
+      "date": "2020-02-22",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "category": ""
+    },
+    {
+      "id": 3,
+      "title": "36 Days of Malayalam type",
+      "photo": "https://picsum.photos/246/180",
+      "date": "2018-12-01",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet",
+      "category": ""
+    },
+    {
+      "id": 4,
+      "title": "Components",
+      "photo": "https://picsum.photos/246/180",
+      "date": "2019-02-02",
+      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet",
+      "category": ""
+    }
+  ],
   "users": [
     {
       "email": "chiarayroiemhanhphucnhe@gmail.com",
@@ -7,6 +40,13 @@
       "id": 1,
       "name": "Búp bê Baby",
       "mobile": "0986977365"
+    },
+    {
+      "email": "pdvuongtb@gmail.com",
+      "password": "$2a$10$QXfWD7/uVfTw6Aaz9bIXaedd9ok1lj2zestzKRmSZTrIfET4TW7f.",
+      "id": 2,
+      "name": "vượng phan đức",
+      "mobile": 986977365
     }
   ],
   "category": [

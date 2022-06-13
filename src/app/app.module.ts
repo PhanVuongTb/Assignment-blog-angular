@@ -23,6 +23,8 @@ import { SignupPageComponent } from './page/signup-page/signup-page.component';
 import { HeaderAdminComponent } from './dashboard/header-admin/header-admin.component';
 import { UsersComponent } from './dashboard/users/users.component';
 import { UsersEditComponent } from './dashboard/users-edit/users-edit.component';
+import { BlogPageComponent } from './page/blog-page/blog-page.component';
+import { ContactPageComponent } from './page/contact-page/contact-page.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { UsersEditComponent } from './dashboard/users-edit/users-edit.component'
     SignupPageComponent,
     HeaderAdminComponent,
     UsersComponent,
-    UsersEditComponent
+    UsersEditComponent,
+    BlogPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
