@@ -15,7 +15,8 @@ export class SigninPageComponent implements OnInit {
     name: "",
     email: "",
     password: "",
-    mobile: 0
+    mobile: 0,
+    role: 1
    }
 
   constructor(
@@ -31,8 +32,16 @@ export class SigninPageComponent implements OnInit {
     this.usersService.signin(this.user).subscribe(data => {
       localStorage.setItem("user", JSON.stringify(this.user));
       alert(' ĐĂng nhập thành công')
-      this.router.navigateByUrl('/');
+      localStorage.setItem("user", JSON.stringify(data))
+      setTimeout(()=>{
+        if (JSON.parse(localStorage.getItem("user")!).user. role== 2) {
+          this.router.navigateByUrl(`/dashboard`)
+              console.log("admin");
+        }else{
+          this.router.navigateByUrl(`/`)
+              console.log("user");
+        }
+      },2000)
     })
 }
-
 }

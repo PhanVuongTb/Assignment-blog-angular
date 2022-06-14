@@ -25,6 +25,7 @@ import { UsersComponent } from './dashboard/users/users.component';
 import { UsersEditComponent } from './dashboard/users-edit/users-edit.component';
 import { BlogPageComponent } from './page/blog-page/blog-page.component';
 import { ContactPageComponent } from './page/contact-page/contact-page.component';
+import { WebsiteComponent } from './layout/website/website.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ContactPageComponent } from './page/contact-page/contact-page.component
     UsersComponent,
     UsersEditComponent,
     BlogPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,

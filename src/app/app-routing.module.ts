@@ -9,6 +9,7 @@ import { ProductsEditComponent } from './dashboard/products-edit/products-edit.c
 import { ProductsComponent } from './dashboard/products/products.component';
 import { UsersEditComponent } from './dashboard/users-edit/users-edit.component';
 import { UsersComponent } from './dashboard/users/users.component';
+import { WebsiteComponent } from './layout/website/website.component';
 import { BlogPageComponent } from './page/blog-page/blog-page.component';
 import { ContactPageComponent } from './page/contact-page/contact-page.component';
 import { HomePageComponent } from './page/home-page/home-page.component';
@@ -17,38 +18,55 @@ import { ProductPageDetailComponent } from './page/product-page-detail/product-p
 import { ProductPageComponent } from './page/product-page/product-page.component';
 import { SigninPageComponent } from './page/signin-page/signin-page.component';
 import { SignupPageComponent } from './page/signup-page/signup-page.component';
+import { AdminGuard } from './server/admin.guard';
 
 const routes: Routes = [
   // layout
-  { path: '', component: HomePageComponent  },
-  { path: 'signup', component: SignupPageComponent  },
-  { path: 'signin', component: SigninPageComponent  },
-  { path: 'blog', component: BlogPageComponent },
-  { path: 'posts', component: ProductPageComponent },
-  { path: 'posts/:id', component: ProductPageDetailComponent },
-  { path: 'contact', component: ContactPageComponent },
-  
+  {
+    path: '', component: WebsiteComponent, children: [
+      { path: "", component: HomePageComponent },
+      { path: 'blog', component: BlogPageComponent },
+      { path: 'posts', component: ProductPageComponent },
+      { path: 'posts/:id', component: ProductPageDetailComponent },
+      { path: 'contact', component: ContactPageComponent },
+    ]
+  },
+  { path: 'signup', component: SignupPageComponent },
+  { path: 'signin', component: SigninPageComponent },
+
+
 
   // dashboard
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'dashboard/posts', component: ProductsComponent },
-  { path: 'dashboard/posts/add', component: ProductsAddComponent },
-  { path: 'dashboard/posts/edit/:id', component: ProductsEditComponent },
-
-  { path: 'dashboard/category', component: CategoryComponent },
-  { path: 'dashboard/category/add', component: CategoryAddComponent },
-  { path: 'dashboard/category/edit/:id', component: CategoryEditComponent},
-
-  { path: 'dashboard/users', component: UsersComponent },
-  { path: 'dashboard/users/edit/:id', component: UsersEditComponent},
-
-
+  {
+    path: 'dashboard', canActivate: [AdminGuard], component: DashboardComponent,
+    children: [
+      {
+        path: 'posts', children: [
+          { path: '', component: ProductsComponent },
+          { path: 'add', component: ProductsAddComponent },
+          { path: 'edit/:id', component: ProductsEditComponent },
+        ]
+      },
+      {
+        path: 'category', children: [
+          { path: '', component: CategoryComponent },
+          { path: 'add', component: CategoryAddComponent },
+          { path: 'edit/:id', component: CategoryEditComponent },
+        ]
+      },
+      {
+        path: 'users', children: [
+          { path: '', component: UsersComponent },
+        ]
+      },
+    ]
+  },
   { path: "**", component: PageNotFoundComponent },
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

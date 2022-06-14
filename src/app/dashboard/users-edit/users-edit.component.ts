@@ -14,7 +14,8 @@ export class UsersEditComponent implements OnInit {
     name: "",
     email: "",
     password: "",
-    mobile: 0
+    mobile: 0,
+    role: 1
    }
   constructor(
     private usersService : UsersService,

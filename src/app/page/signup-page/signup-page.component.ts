@@ -15,7 +15,8 @@ export class SignupPageComponent implements OnInit {
     name: "",
     email: "",
     password: "",
-    mobile: 0
+    mobile: 0,
+    role: 1
    }
   constructor(
     private usersService : UsersService,
@@ -29,7 +30,6 @@ export class SignupPageComponent implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
      this.usersService.addUser(this.user).subscribe(data => {
       console.log(data);
-
       // chuyển hướng router
       this.router.navigateByUrl('/signin');
     })

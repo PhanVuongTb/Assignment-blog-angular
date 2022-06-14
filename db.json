@@ -36,6 +36,7 @@
   "users": [
     {
       "email": "chiarayroiemhanhphucnhe@gmail.com",
+      "role": 2,
       "password": "$2a$10$yk932G/SNZVkn3KJsGR8NOu.MclN0hXBNGJK6W8Y37anqEhh7I0wW",
       "id": 1,
       "name": "Búp bê Baby",
@@ -47,6 +48,22 @@
       "id": 2,
       "name": "vượng phan đức",
       "mobile": 986977365
+    },
+    {
+      "email": "pdvuongtb1@gmail.com",
+      "password": "$2a$10$IJf7YraGw.duQ3VxvoHy8uEJiZUQEygzXClZ7.nfqRvjK9YrOVNB.",
+      "id": 3,
+      "name": "vượng phan đức",
+      "mobile": 986977365,
+      "role": 1
+    },
+    {
+      "email": "vuong1@gmail.com",
+      "password": "$2a$10$//oVhjegQ0Pw8egH5C.q/Oyeqh6y0mcj5HwqmfYY9D7ztGTKIkcXa",
+      "id": 4,
+      "name": "phan Vượng",
+      "mobile": 986977365,
+      "role": 2
     }
   ],
   "category": [
