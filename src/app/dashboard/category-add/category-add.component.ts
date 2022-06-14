@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICategory } from './../../../../models/category.models';
 import { CategoryService } from 'src/app/server/category.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-category-add',
@@ -13,7 +14,7 @@ export class CategoryAddComponent implements OnInit {
     id: 0,
     name: "",
   }
-  constructor(private categoryService: CategoryService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private categoryService: CategoryService, private router: Router, private activatedRoute: ActivatedRoute, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -26,7 +27,6 @@ export class CategoryAddComponent implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
      this.categoryService.addCategory(this.categorys).subscribe(data => {
       console.log(data);
-      
       // chuyển hướng router
       this.router.navigateByUrl('/dashboard/category');
       alert("Thêm thành công!")
