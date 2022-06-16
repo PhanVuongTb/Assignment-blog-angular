@@ -26,7 +26,9 @@ import { UsersEditComponent } from './dashboard/users-edit/users-edit.component'
 import { BlogPageComponent } from './page/blog-page/blog-page.component';
 import { ContactPageComponent } from './page/contact-page/contact-page.component';
 import { WebsiteComponent } from './layout/website/website.component';
-
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -54,9 +56,12 @@ import { WebsiteComponent } from './layout/website/website.component';
     WebsiteComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ToastrModule.forRoot(),
     ReactiveFormsModule,
     HttpClientModule
   ],

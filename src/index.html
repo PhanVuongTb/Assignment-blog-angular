@@ -10,6 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <script>
     tailwind.config = {
@@ -22,6 +23,11 @@
       }
     }
   </script>
+  <style>
+    .nav-input:checked~.nav-mobile {
+      transform: translate(0%);
+    }
+  </style>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Heebo:wght@100;200;300;400;500;600;700;800&display=swap');
   </style>
@@ -52,6 +58,9 @@
         }
         .banner-content-button{
             @apply text-[20px] py-[9px] px-[21px] font-bold text-white bg-red-500 rounded
+        }
+        .banner-content-button-1{
+            @apply text-[20px] py-[9px] px-[21px] font-bold text-white bg-blue-400 rounded
         }
         .banner-image{
             @apply order-1 md:order-2;

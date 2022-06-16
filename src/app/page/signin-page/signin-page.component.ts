@@ -34,7 +34,7 @@ export class SigninPageComponent implements OnInit {
       alert(' ĐĂng nhập thành công')
       localStorage.setItem("user", JSON.stringify(data))
       setTimeout(()=>{
-        if (JSON.parse(localStorage.getItem("user")!).user. role== 2) {
+        if (JSON.parse(localStorage.getItem("user")!).user.role == 2) {
           this.router.navigateByUrl(`/dashboard`)
               console.log("admin");
         }else{
